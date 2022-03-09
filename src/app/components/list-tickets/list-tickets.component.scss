@@ -1,0 +1,33 @@
+.container-all{
+    padding: 0px 200px 0px 200px;
+    margin-top: 2%;
+    .card{
+        width: 100% !important;
+        border-radius: 20px;
+        
+        .container-card{
+            display:flex;
+            flex-direction: row;
+            .header{
+                width: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 100%;
+                }
+            }
+
+            button {
+                background-color: #242c64;
+                color: #ffffff;
+                width: 20%;
+                border-radius: 5px;
+              }
+              
+        }
+    }
+}
+
+
+

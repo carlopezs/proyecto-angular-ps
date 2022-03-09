@@ -1,0 +1,24 @@
+<div class="container-all">
+    
+    <div class="card w-75 mb-3" *ngFor="let ticket of tickets">
+        <div class="container-card">
+          <div class="header">
+            <img src="../../../assets/ticket.png" />
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{ ticket.Id }}</h5>
+            <p><strong>Tipo:</strong>{{ ticket.Tipo }}</p>
+            <p>
+              <strong>Fecha:</strong>
+              {{ ticket.Fecha }}
+            </p>
+            <p>
+              <strong>Estado:</strong>
+              {{ ticket.Estado }}
+            </p>
+            <button type="button" class="btn" (click)="goToSeeTicketDetail(ticket)" >Ver detalle</button>
+          </div>
+        </div>
+      </div>
+</div>
+

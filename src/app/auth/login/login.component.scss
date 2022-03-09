@@ -1,0 +1,56 @@
+.container-class {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+
+  .image-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    height: 100%;
+    background-color: #242c64;
+
+
+
+    img {
+      width: 70%;
+    }
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    margin: 0px 100px 0px 100px;
+
+    .welcome {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      img {
+        width: 50%;
+        border-radius: 10px;
+      }
+    }
+
+    input {
+      width: 300px;
+    }
+
+    button {
+      background-color: #242c64;
+      color: #ffffff;
+      width: 100%;
+      border-radius: 5px;
+    }
+  }
+
+}
