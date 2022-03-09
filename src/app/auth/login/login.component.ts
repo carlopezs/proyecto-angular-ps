@@ -32,22 +32,18 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
-
-  login() {
-    const subs = this.authService.loginUser(this.userLogin).subscribe((res) => {
-      if (res[0] !== undefined) {
-        this.router.navigate([`/listTickets/${res[0].Empleado_id}`]);
-      }
-      else{
-        alert('Error al ingresar')
-      }
-    });
-
-    this.subscriptions.push(subs);
+  ngOnInit(): void {
+    sessionStorage.removeItem('userId')
   }
 
-  ngOnDestroy() {
-    this.subscriptions.map((res) => res.unsubscribe());
+  login() {
+    this.authService.loginUser(this.userLogin).then((res) => {
+      if (res !== undefined) {
+        this.router.navigate(['listTickets'])
+      }else{
+        alert('Error al ingresar')
+      }
+    
+    });
   }
 }

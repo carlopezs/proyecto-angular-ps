@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TicketsService } from '../../services/tickets.service';
 import { Subscription } from 'rxjs';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-list-tickets',
@@ -14,10 +15,10 @@ export class ListTicketsComponent implements OnInit {
 
   subscriptions: Subscription[] = [];
 
-  constructor(private ticketsService: TicketsService, private activateRoute: ActivatedRoute, private router:Router) { }
+  constructor(private ticketsService: TicketsService, private authService:AuthService, private router:Router) { }
 
   ngOnInit(): void {
-    const sub = this.ticketsService.getAllTicketsByUserId(this.activateRoute.snapshot.params['id']).subscribe((res:any)=>{
+    const sub = this.ticketsService.getAllTicketsByUserId(this.authService.getUserId()).subscribe((res:any)=>{
       this.tickets = res
      
     })
