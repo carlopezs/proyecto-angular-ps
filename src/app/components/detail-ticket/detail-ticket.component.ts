@@ -12,7 +12,11 @@ export class DetailTicketComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.ticket = localStorage.getItem('ticket');
+
+      this.ticket = JSON.parse( localStorage.getItem('ticket') || '' );
+      console.log(this.ticket)
+  
+  
   }
 
 }

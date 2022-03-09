@@ -36,8 +36,11 @@ export class LoginComponent implements OnInit {
 
   login() {
     const subs = this.authService.loginUser(this.userLogin).subscribe((res) => {
-      if (res.lenght !== 0) {
+      if (res[0] !== undefined) {
         this.router.navigate([`/listTickets/${res[0].Empleado_id}`]);
+      }
+      else{
+        alert('Error al ingresar')
       }
     });
 

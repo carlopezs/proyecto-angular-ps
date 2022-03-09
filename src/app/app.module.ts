@@ -8,6 +8,7 @@ import { ListTicketsComponent } from './components/list-tickets/list-tickets.com
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailTicketComponent } from './components/detail-ticket/detail-ticket.component';
+import { MenuComponent } from './sharedComponents/menu/menu.component';
 
 
 @NgModule({
@@ -15,13 +16,14 @@ import { DetailTicketComponent } from './components/detail-ticket/detail-ticket.
     AppComponent,
     LoginComponent,
     ListTicketsComponent,
-    DetailTicketComponent
+    DetailTicketComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
