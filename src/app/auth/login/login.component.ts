@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
     this.authService.loginUser(this.userLogin).then((res) => {
       if (res !== undefined) {
         this.router.navigate(['listTickets'])
+        console.log('Hola')
       }else{
         alert('Error al ingresar')
       }
